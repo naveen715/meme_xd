@@ -14,6 +14,7 @@ class _signinState extends State<signin> {
   final GlobalKey<FormState>_formkey = GlobalKey<FormState>();
   String username ="";
   String password ="";
+  int flag = 0;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -90,11 +91,14 @@ class _signinState extends State<signin> {
                                     {
                                       currentUser=userData[i];
                                       Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>homePage()));
+                                      setState(() {
+                                        flag =1;
+                                      });
                                     }
-                                  else
-                                    {
-                                      ScaffoldMessenger.of(context).showSnackBar(snackBar1);
-                                    }
+                                }
+                              if(flag==0)
+                                {
+                                  ScaffoldMessenger.of(context).showSnackBar(snackBar1);
                                 }
                             }
                           }
