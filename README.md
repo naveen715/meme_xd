@@ -15,5 +15,5 @@ To run the application run the attached apk file or
 
 ## using the app 
 ### Login
-![LoginScreenShot](meme_xd/Screenshot 2022-01-14 233009.png)
+!(meme_xd/Screenshot 2022-01-14 233009.png)
 
