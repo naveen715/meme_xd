@@ -153,6 +153,8 @@ class _homePageState extends State<homePage> {
         body: Container(
             padding: const EdgeInsets.fromLTRB(30, 30, 30, 0),
             color: Colors.black,
+            height: MediaQuery.of(context).size.height,
+            width: MediaQuery.of(context).size.width,
             child: SingleChildScrollView(
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
