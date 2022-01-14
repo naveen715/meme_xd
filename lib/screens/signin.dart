@@ -1,8 +1,7 @@
-
+//Page for sigining in the user
 import 'package:flutter/material.dart';
 import 'package:meme_xd/Constants/constant.dart';
 import 'package:meme_xd/main.dart';
-
 import 'homePage.dart';
 
 class signin extends StatefulWidget {
@@ -98,8 +97,6 @@ class _signinState extends State<signin> {
                                     }
                                 }
                             }
-
-
                           }
                         },
                       ),

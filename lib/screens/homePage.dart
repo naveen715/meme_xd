@@ -1,9 +1,8 @@
+//Home page containig the bottom navigation bar
 import 'package:flutter/material.dart';
-import 'package:meme_xd/Constants/bottomNavigationChildren.dart';
 import 'package:meme_xd/Constants/constant.dart';
 import 'package:meme_xd/screens/seeAlbum.dart';
 import 'package:meme_xd/screens/signin.dart';
-
 import '../main.dart';
 class homePage extends StatefulWidget {
   @override
@@ -12,6 +11,7 @@ class homePage extends StatefulWidget {
 
 class _homePageState extends State<homePage> {
   int _currentIndex = 0;
+  //Function to change the index of bottom navigation bar
   void onTabTapped(int index)async{
     setState(() {
       _currentIndex = index;
@@ -19,6 +19,7 @@ class _homePageState extends State<homePage> {
   }
   @override
   Widget build(BuildContext context) {
+    //List of children for bottom navigation bar
     final List children = [
       Scaffold(
         appBar: PreferredSize(

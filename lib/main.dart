@@ -1,3 +1,7 @@
+//Starting point of application
+//contains splash screen
+//User redirected to signin page after splash screen
+
 import 'package:animated_splash_screen/animated_splash_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:meme_xd/api_&_utils/get_users.dart';
@@ -22,6 +26,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
+      //Splash Screen
       home:AnimatedSplashScreen(
         backgroundColor: Colors.black26,
         duration:300,
@@ -48,6 +53,7 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   void initState() {
     super.initState();
+    //Function call to hit the api and get the response
     getUsers();
   }
   @override

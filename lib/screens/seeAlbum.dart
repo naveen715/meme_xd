@@ -1,3 +1,5 @@
+//Screen for user to view a particular album
+
 import 'package:flutter/material.dart';
 class seeAlbum extends StatefulWidget {
   const seeAlbum({Key? key, required this.title}) : super(key: key);
@@ -7,6 +9,7 @@ class seeAlbum extends StatefulWidget {
 }
 
 class _seeAlbumState extends State<seeAlbum> {
+  //List of string containing the images to be shown
   List<String> imageList =[
     "https://cdn.pixabay.com/photo/2018/01/14/23/12/nature-3082832__340.jpg",
     "https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg",

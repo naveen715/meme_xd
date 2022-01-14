@@ -1,6 +1,6 @@
-
+//Hitting the api to get the user details
 import 'dart:convert';
- import 'package:http/http.dart'as http;
+import 'package:http/http.dart'as http;
 import 'package:meme_xd/api_&_utils/parse_response.dart';
 
 import '../main.dart';

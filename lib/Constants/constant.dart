@@ -1,3 +1,5 @@
+//file contains constants required in the application
+
 import 'package:flutter/material.dart';
 
 const textinputdecoration = InputDecoration(

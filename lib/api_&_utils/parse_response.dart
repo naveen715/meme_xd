@@ -1,4 +1,4 @@
-
+//a class to parsse the response we are getting from the api
 import 'dart:convert';
 
 class Users {
