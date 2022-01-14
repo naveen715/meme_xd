@@ -47,13 +47,16 @@ class _seeAlbumState extends State<seeAlbum> {
             itemCount: 8,
             itemBuilder: (BuildContext context,int index){
               return Container(
-                height: 200,
+                height: MediaQuery.of(context).size.height/3,
                 padding: EdgeInsets.fromLTRB(10, 10, 10, 10),
-                decoration: BoxDecoration(
-                    color: Colors.grey[900],
+                  decoration: BoxDecoration(
+                      color: Colors.grey[900],
                     borderRadius: BorderRadius.circular(20)
+                  ),
+                child: ListTile(
+                 title:Image.network(imageList[index],fit: BoxFit.contain,) ,
+                  subtitle: Text("Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text ",style: TextStyle(color: Colors.white60, fontSize: 15),overflow: TextOverflow.clip,),
                 ),
-                child:Image.network(imageList[index],fit: BoxFit.fill,),
               );
             }
         ),
