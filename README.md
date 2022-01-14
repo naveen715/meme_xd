@@ -26,7 +26,6 @@ To run the application run the attached apk file or
 ![Home Page](https://github.com/naveen715/meme_xd/blob/master/Screenshot%202022-01-14%20235052.png)
 ![Home Page](https://github.com/naveen715/meme_xd/blob/master/Screenshot%202022-01-14%20233110.png)
 ![Home Page](https://github.com/naveen715/meme_xd/blob/master/Screenshot%202022-01-14%20233131.png)
-
-
+The data in user profile is from the api rest of the data is dummy data
 
 
