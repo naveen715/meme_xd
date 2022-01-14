@@ -15,5 +15,5 @@ To run the application run the attached apk file or
 
 ## using the app 
 ### Login
-!(https://github.com/naveen715/meme_xd/blob/master/Screenshot%202022-01-14%20233009.png)
+![Login Image](https://github.com/naveen715/meme_xd/blob/master/Screenshot%202022-01-14%20233009.png)
 
