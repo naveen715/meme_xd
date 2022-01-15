@@ -37,9 +37,9 @@ List<String> status = [
   "Incomplete",
   "Completed"
 ];
-TextColour(String value)
+TextColour(bool value)
 {
-  if(value=="Incomplete")
+  if(value==false)
     return Colors.red;
   else
     return Colors.green;

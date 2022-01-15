@@ -1,6 +1,7 @@
 //Page for sigining in the user
 import 'package:flutter/material.dart';
 import 'package:meme_xd/Constants/constant.dart';
+import 'package:meme_xd/api_&_utils/parse_albums.dart';
 import 'package:meme_xd/main.dart';
 import 'homePage.dart';
 
@@ -14,6 +15,7 @@ class _signinState extends State<signin> {
   final GlobalKey<FormState>_formkey = GlobalKey<FormState>();
   String username ="";
   String password ="";
+  int flag = 0;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -90,11 +92,29 @@ class _signinState extends State<signin> {
                                     {
                                       currentUser=userData[i];
                                       Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>homePage()));
+                                      setState(() {
+                                        flag =1;
+                                      });
                                     }
-                                  else
-                                    {
-                                      ScaffoldMessenger.of(context).showSnackBar(snackBar1);
-                                    }
+                                }
+                              for(int i=0;i<TODOs.length;i++)
+                              {
+                                if(TODOs[i].userId==currentUser.id)
+                                {
+                                  TODOCurrentUser.add(TODOs[i]);
+                                }
+                              }
+                              for(int i=0;i<Albums.length;i++)
+                              {
+                                if(Albums[i].userId==currentUser.id)
+                                {
+                                  AlbumsCurrentUser.add(Albums[i]);
+                                  print(Albums[i]);
+                                }
+                              }
+                              if(flag==0)
+                                {
+                                  ScaffoldMessenger.of(context).showSnackBar(snackBar1);
                                 }
                             }
                           }

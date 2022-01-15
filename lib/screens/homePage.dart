@@ -1,6 +1,7 @@
 //Home page containig the bottom navigation bar
 import 'package:flutter/material.dart';
 import 'package:meme_xd/Constants/constant.dart';
+import 'package:meme_xd/api_&_utils/parse_Images.dart';
 import 'package:meme_xd/screens/seeAlbum.dart';
 import 'package:meme_xd/screens/signin.dart';
 import '../main.dart';
@@ -47,7 +48,7 @@ class _homePageState extends State<homePage> {
               separatorBuilder: (context, index) => const SizedBox(
                 height: 20,
               ),
-              itemCount: 20,
+              itemCount: AlbumsCurrentUser.length,
               itemBuilder: (BuildContext context, int index) {
                 return Container(
                   height: 70,
@@ -60,15 +61,26 @@ class _homePageState extends State<homePage> {
                       color: Colors.white70,
                     ),
                     title: Text(
-                      "Island in the sun",
-                      style: TextStyle(color: Colors.white70, fontSize: 30),
+                      AlbumsCurrentUser[index].title,
+                      style: TextStyle(color: Colors.white70, fontSize: 20),
                     ),
                     onTap: () {
+                      List<Photo> ImageList = [];
+                      for(int i=0;i<AlbumsCurrentUser.length;i++)
+                        {
+                          for(int j=0;j<Photos.length;j++)
+                            {
+                              if(AlbumsCurrentUser[i].id==Photos[j].albumId)
+                                {
+                                  ImageList.add(Photos[j]);
+                                }
+                            }
+                        }
                       Navigator.push(
                           context,
                           MaterialPageRoute(
                               builder: (context) => seeAlbum(
-                                title: "Island in the sun",
+                                title: AlbumsCurrentUser[index].title,ImageList: ImageList,
                               )));
                     },
                   ),
@@ -102,7 +114,7 @@ class _homePageState extends State<homePage> {
               separatorBuilder: (context, index) => const SizedBox(
                 height: 20,
               ),
-              itemCount: 6,
+              itemCount:TODOCurrentUser.length,
               itemBuilder: (BuildContext context, int index) {
                 return Container(
                   height: 80,
@@ -111,13 +123,13 @@ class _homePageState extends State<homePage> {
                       borderRadius: BorderRadius.circular(20)),
                   child: ListTile(
                     title: Text(
-                      listMessage[index],
-                      style: TextStyle(color: Colors.white70, fontSize: 30),
+                      TODOCurrentUser[index].title,
+                      style: TextStyle(color: Colors.white70, fontSize: 20),
                     ),
                     subtitle: Text(
-                      status[index],
+                      TODOCurrentUser[index].completed?"Completed":"Incomplete",
                       style:
-                      TextStyle(color: TextColour(status[index]), fontSize: 15),
+                      TextStyle(color: TextColour(TODOCurrentUser[index].completed), fontSize: 15),
                     ),
                   ),
                 );
@@ -153,6 +165,8 @@ class _homePageState extends State<homePage> {
         body: Container(
             padding: const EdgeInsets.fromLTRB(30, 30, 30, 0),
             color: Colors.black,
+            height: MediaQuery.of(context).size.height,
+            width: MediaQuery.of(context).size.width,
             child: SingleChildScrollView(
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,

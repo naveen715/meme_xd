@@ -4,17 +4,32 @@
 
 import 'package:animated_splash_screen/animated_splash_screen.dart';
 import 'package:flutter/material.dart';
+import 'package:meme_xd/api_&_utils/get_Photos.dart';
+import 'package:meme_xd/api_&_utils/get_albums.dart';
+import 'package:meme_xd/api_&_utils/get_todos.dart';
 import 'package:meme_xd/api_&_utils/get_users.dart';
+import 'package:meme_xd/api_&_utils/parse_Images.dart';
 import 'package:meme_xd/api_&_utils/parse_response.dart';
 import 'package:meme_xd/screens/homePage.dart';
 import 'package:meme_xd/screens/seeAlbum.dart';
 import 'package:meme_xd/screens/signin.dart';
+import 'api_&_utils/parse_albums.dart';
+import 'api_&_utils/parse_todo.dart';
 
 void main() {
   runApp(const MyApp());
 }
-List<Users> userData = [];
 var currentUser = userData[0];
+List<ToDo> TODOCurrentUser = [];
+List<Album> AlbumsCurrentUser = [];
+
+List<ToDo> TODOs = [];
+List<Photo> Photos = [];
+List<Users> userData = [];
+List<Album> Albums = [];
+
+
+
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
 
@@ -54,6 +69,9 @@ class _MyHomePageState extends State<MyHomePage> {
   void initState() {
     super.initState();
     //Function call to hit the api and get the response
+    getAlbums();
+    getTodo();
+    getPhotos();
     getUsers();
   }
   @override
