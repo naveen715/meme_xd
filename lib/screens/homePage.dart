@@ -66,16 +66,17 @@ class _homePageState extends State<homePage> {
                     ),
                     onTap: () {
                       List<Photo> ImageList = [];
-                      for(int i=0;i<AlbumsCurrentUser.length;i++)
-                        {
+                      ImageList.clear();
+
                           for(int j=0;j<Photos.length;j++)
                             {
-                              if(AlbumsCurrentUser[i].id==Photos[j].albumId)
+                              if(AlbumsCurrentUser[index].id==Photos[j].albumId)
                                 {
                                   ImageList.add(Photos[j]);
                                 }
                             }
-                        }
+                      print(ImageList.length);
+                      print(Photos.length);
                       Navigator.push(
                           context,
                           MaterialPageRoute(
