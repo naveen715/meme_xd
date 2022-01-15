@@ -22,10 +22,9 @@ To run the application run the attached apk file or
 4. Minor typechecking for invalid password , user doesnt has proper internet connection, empty text field etc are being done
 5. After entering correct user name and password user is sent to home page.
 ### Home Page
-![Home Page](https://github.com/naveen715/meme_xd/blob/master/Screenshot%202022-01-14%20233051.png)
-![Home Page](https://github.com/naveen715/meme_xd/blob/master/Screenshot%202022-01-14%20235052.png)
-![Home Page](https://github.com/naveen715/meme_xd/blob/master/Screenshot%202022-01-14%20233110.png)
-![Home Page](https://github.com/naveen715/meme_xd/blob/master/Screenshot%202022-01-14%20233131.png)
-The data in user profile is from the api rest of the data is dummy data
+![Home Page](https://github.com/naveen715/meme_xd/blob/master/Screenshot%202022-01-16%20003153.png)
+![Home Page](https://github.com/naveen715/meme_xd/blob/master/Screenshot%202022-01-16%20003136.png)
+![Home Page](https://github.com/naveen715/meme_xd/blob/master/Screenshot%202022-01-16%20003118.png)
+![Home Page](https://github.com/naveen715/meme_xd/blob/master/Screenshot%202022-01-16%20003053.png)
 
 
