@@ -45,8 +45,13 @@ class _seeAlbumState extends State<seeAlbum> {
                     borderRadius: BorderRadius.circular(20)
                   ),
                 child: ListTile(
+<<<<<<< HEAD
                  title:Image.network(widget.ImageList[index].url,fit: BoxFit.contain,width:MediaQuery.of(context).size.height/4,height: MediaQuery.of(context).size.height/4,) ,
                   subtitle: Text(widget.ImageList[index].title,style: TextStyle(color: Colors.white60, fontSize: 15),overflow: TextOverflow.clip,),
+=======
+                 title:Image.network(imageList[index],fit: BoxFit.contain,) ,
+                  subtitle: Text("Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text ",style: TextStyle(color: Colors.white60, fontSize: 15),overflow: TextOverflow.clip,),
+>>>>>>> origin/master
                 ),
               );
             }

@@ -97,6 +97,7 @@ class _signinState extends State<signin> {
                                       });
                                     }
                                 }
+<<<<<<< HEAD
                               for(int i=0;i<TODOs.length;i++)
                               {
                                 if(TODOs[i].userId==currentUser.id)
@@ -112,6 +113,8 @@ class _signinState extends State<signin> {
                                   print(Albums[i]);
                                 }
                               }
+=======
+>>>>>>> origin/master
                               if(flag==0)
                                 {
                                   ScaffoldMessenger.of(context).showSnackBar(snackBar1);
